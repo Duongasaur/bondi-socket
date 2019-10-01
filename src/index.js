@@ -3,6 +3,8 @@ const express = require("express");
 const sockjs = require("sockjs");
 const cors = require("cors");
 
+const PORT = process.env.PORT || 8080;
+
 const sockjs_opts = {
   prefix: "/echo"
 };
@@ -47,6 +49,5 @@ app.get("/", (req, res) => res.send("welcome to bondi bet broadcaster!"));
 
 app.use(cors);
 const server = http.createServer(app);
-
-server.listen(8080); //the server object listens on port 8080
+server.listen(PORT);
 sockjsEcho.installHandlers(server, { prefix: "/echo" });

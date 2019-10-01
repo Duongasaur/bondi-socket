@@ -4,8 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "build": "npm start",
-    "start": "nodemon src/index.js localhost 8080"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "cors": "2.8.5",
